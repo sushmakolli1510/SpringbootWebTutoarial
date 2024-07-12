@@ -1,10 +1,13 @@
 package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.URL;
 
 import java.time.LocalDate;
 
@@ -13,19 +16,16 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="employees")
-public class EmployeeEntity {
+@Table(name="department")
+public class DepartmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
     private Long id;
-    private String name;
-    private String email;
-    private Integer age;
+    private String title;
     private boolean isActive;
-    private LocalDate dateOfJoining;
-    private String role;
-    private Double salary;
-    private String creditCardNumber;
-    private Integer experience;
-
+    private LocalDate createdAt;
+    private Integer capacity;
+    private String website;
+    private String description;
+    private Integer rating;
 }
