@@ -1,6 +1,7 @@
 package com.codingshuttle.springbootwebtutorial.springbootwebtutorial.DTO;
 
 import com.codingshuttle.springbootwebtutorial.springbootwebtutorial.annotations.EmployeeRoleValidation;
+import com.codingshuttle.springbootwebtutorial.springbootwebtutorial.annotations.PasswordValidation;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -40,6 +41,8 @@ public class EmployeeDTO {
     private String creditCardNumber;
     @Range(min = 1, max = 10, message = "experience should be in range 1 and 10")
     private Integer experience;
+    @PasswordValidation
+    private String password;
 
 
 }

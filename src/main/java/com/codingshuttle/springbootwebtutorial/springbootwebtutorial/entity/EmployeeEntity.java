@@ -27,5 +27,6 @@ public class EmployeeEntity {
     private Double salary;
     private String creditCardNumber;
     private Integer experience;
+    private String password;
 
 }

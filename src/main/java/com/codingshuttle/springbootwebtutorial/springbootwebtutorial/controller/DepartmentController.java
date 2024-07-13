@@ -33,7 +33,7 @@ public class DepartmentController {
         return ResponseEntity.ok(departmentService.getAllDepartments());
     }
 
-    @PostMapping( produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping
     public ResponseEntity<DepartmentDTO> createNewEmployee(@RequestBody @Valid DepartmentDTO department){
 
         DepartmentDTO departmentDTO= departmentService.saveDepartment(department);

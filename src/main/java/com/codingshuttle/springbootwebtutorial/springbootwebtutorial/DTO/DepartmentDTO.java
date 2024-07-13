@@ -30,4 +30,6 @@ public class DepartmentDTO {
     private String description;
     @Range(min = 1, max = 5, message = "department rating should be in range 1 and 5")
     private Integer rating;
+
+
 }
